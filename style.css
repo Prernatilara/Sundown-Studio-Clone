@@ -328,6 +328,28 @@ nav .menu .fa-xmark{
     
     
 }
+
+#elem-container{
+    height: 100%;
+   
+    position: relative;
+}
+
+#fixed-image{
+    height: 30vw;
+    width: 24vw;
+    background-color: transparent;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 25%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+    
+}
+
 .elem {
     height: 120px;
     width: 100%;
@@ -340,6 +362,8 @@ nav .menu .fa-xmark{
     padding: 0;
     overflow: hidden;
     cursor: pointer;
+    z-index: 1;
+   
 }
 .elem h2 {
     font-size: 3.5vw;
@@ -383,20 +407,7 @@ nav .menu .fa-xmark{
 }
 
 
-#fixed-image{
-    height: 30vw;
-    width: 24vw;
-    background-color: transparent;
-    border-radius: 10px;
-    position: fixed;
-    z-index: 99;
-    left: 50%;
-    top: 25%;
-    display: none;
-    background-size: cover;
-    background-position: center;
-    
-}
+
 #page4{
     height: 200vh;
     width: 100%;
@@ -576,33 +587,55 @@ nav .menu .fa-xmark{
     font-weight: 200;
     color: #000000cb;
 }
+.cursor{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(253, 63, 25);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    z-index: 2;
+    left: 400px;
+    visibility: hidden;
+}
+.cursor i{
+    color: white;
+   
+}
 .swiper {
     width: 100%;
     height: 80%;
-    overflow-x: scroll;
+    position: relative;
 }
-swiper-wrapper{
-    height: 80%;
 
+.swiper-wrapper{
+    height: 100%;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(7,1fr);
+    z-index: 11;
+    grid-template-columns: repeat(7,400px);
+    overflow-x: scroll;
+    overflow-y: hidden;
+    
     
 }
-.swiper::-webkit-scrollbar{
+.swiper-wrapper::-webkit-scrollbar{
     overflow: hidden;
 }
 .swiper .swiper-slide {
   text-align: center;
   font-size: 18px;
   border-left: 2px solid #0000002e;
-  width: 30%;
   padding: 0 2vw;
-  height: 60%;
+  height: 80%;
 }
 .swiper-slide .img {
     
-    height: 30%;
-    width: 35%;
+    height:100px;
+    width:200px ;
 }
 .swiper-slide .img1{
     background-image: url(https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b15ff_Nike.svg);
@@ -625,24 +658,23 @@ swiper-wrapper{
 .swiper-slide .img5{
     background-image: url(https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b15fe_Hunter.svg);
     background-size: cover;
-    width: 41%;
+    width: 60%;
 }
 .swiper-slide .img6{
     background-image: url(https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b1601_MediaLink.svg);
     background-size: cover;
-    width: 47%;
+    width: 60%;
 }
 .swiper-slide .img7{
     background-image: url(https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b1602_AfterPay.svg);
     background-size: cover;
-    width: 55%;
+    width: 70%;
 }
 .swiper-slide .swiper-para{
     font-weight: 200;
     color: #2d2d2d;
     font-size: 1rem;
-    margin-top: 10px;
-    width: 75%;
+    width: 80%;
     text-align: left;
 }
 #page6{
@@ -809,6 +841,60 @@ swiper-wrapper{
     border-top: 1px solid #dadada78;
     height: 10vh;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.f-b-p{
+    font-weight: 200;
+}
+#footer-bottom .p3{
+    
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+#footer-bottom .p4{
+    
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+#footer-bottom .p3::after{
+    content: "";
+    height: 1.5px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    transition: all ease 0.3s;
+    visibility: hidden;
+   
+    
+   
+}
+#footer-bottom .p4::after{
+    content: "";
+    height: 1.5px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    transition: all ease 0.3s;
+    visibility: hidden;
+    
+    
+}
+#footer-bottom .p3:hover::after{
+    left: 0%;
+    visibility: visible;
+}
+#footer-bottom .p4:hover::after{
+    left: 0%;
+    visibility: visible;
 }
 
 

@@ -8,9 +8,11 @@ function page4Animation(){
     const fixed = document.querySelector("#fixed-image");
     elemC.addEventListener("mouseenter",()=>{
         fixed.style.display = "block";
+       
     })
     elemC.addEventListener("mouseleave",()=>{
         fixed.style.display = "none";
+       
     })
     const elems = document.querySelectorAll(".elem");
     elems.forEach((e)=>{
@@ -71,6 +73,34 @@ h3.addEventListener("click",()=>{
     leftDivp2.style.display = "none";
     leftDivp3.style.display = "block";
 })
+//cursor
+const cursor = document.querySelector(".cursor");
+const swiperWrapper = document.querySelector(".swiper-wrapper");
+swiperWrapper.addEventListener("mouseenter",()=>{
+   cursor.style.visibility = "visible";
+   
+
+    swiperWrapper.style.cursor="none";
+
+})
+swiperWrapper.addEventListener("mousemove",(dept)=>{
+    gsap.to(cursor,{
+        x:dept.x,
+        y:dept.y,
+        xPercent:-150,
+        yPercent:-400,
+        ease:"elastic.out",
+       
+        
+    })
+})
+
+swiperWrapper.addEventListener("mouseleave",()=>{
+    cursor.style.visibility = "hidden";
+    swiperWrapper.style.cursor="auto";
+    
+})
+
 
 // responsiveness
 function menuAnimation(){
