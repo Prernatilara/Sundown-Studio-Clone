@@ -32,7 +32,7 @@ html,body{
 
 #loader {
     height: 100%;
-    width: 100%;
+    width: 100vw;
     position: fixed;
     z-index: 999;
     background-color: black;
@@ -79,7 +79,7 @@ html,body{
 /* page 1 parent of nevigation bar */
 #page1{
     min-height: 100vh;
-    width: 100%;
+    width: 100vw;
     background-color: #EFEAE3;
     position: relative;
     padding:0 2vw ;
@@ -839,7 +839,6 @@ nav .menu .fa-xmark{
 #footer-div{
     height: 20vh;
     width: 100%;
-    /* background-color: red; */
     display: flex;
     justify-content: space-between;
     z-index: 99;
@@ -971,6 +970,14 @@ nav .menu .fa-xmark{
 }
 /*responsiveness*/
 @media (max-width:600px){
+    body{
+        max-width : 100vw;
+    }
+    #main {
+    
+        width: 100vw;
+        
+    }
     #page1{
         min-height: 100vh;
         width: 100vw;
@@ -1096,10 +1103,10 @@ nav .menu .fa-xmark{
     }
     @keyframes anime1 {
         from{
-            transform: translate(55%,-3%);
+            transform: translate(40%,4%);
         }
         to{
-            transform: translate(0%,10%);
+            transform: translate(-20%,10%);
         }
     }
     @keyframes anime2 {
@@ -1113,7 +1120,7 @@ nav .menu .fa-xmark{
 
     #page2{
         min-height: 100vh;
-        width: 100%;
+        width: 100vw;
         padding: 10vw 0;
         background-color: #EFEAE3;
         
@@ -1232,7 +1239,7 @@ nav .menu .fa-xmark{
         background: linear-gradient( to top right,#fe0e0a,#fe8c0a) ;
         /* background: linear-gradient( to bottom left, red, blue ); */
         top: 15%;
-        left: 25%;
+        left: 10%;
         filter: blur(20px);
         animation-name: gooey;
         animation-duration: 3s;
@@ -1248,7 +1255,7 @@ nav .menu .fa-xmark{
     
         }
         to {
-            transform: translate(-15%,15%) skew(-15deg);
+            transform: translate(-5%,5%) skew(-15deg);
         }
         
     }
@@ -1515,15 +1522,7 @@ nav .menu .fa-xmark{
         align-self: first end;
         padding-right: 20px;
     }
-}
-
-
-@media (max-width:600px){
-    #main {
-    
-        width: 100%;
-        
-    }
+   
     #loader h1{
         font-size: 10vw;
         
@@ -1603,16 +1602,16 @@ nav .menu .fa-xmark{
     #footer{
         position:fixed;
         z-index: 9;
-        height: 190vh;
-        width: 100%;
+        height: 100vh;
+        width: 100vw;
         background-color: black;
         bottom: 0;
         color: white;
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
+        
+ 
+        
         flex-direction: column;
-        padding: 0vw 0vw;
+        
     }
     .moving-box-cont{
         height: 45vh;
@@ -1676,43 +1675,44 @@ nav .menu .fa-xmark{
     }   
     
     
-    #footer h1{
+    #footer .f-h1{
         color: #EFEAE3;
         font-size: 23vw;
-        position: relative;
-        left: -42px;
+        position:relative;
+        left: 0;
+    
     }
     #footer-div{
-        height: 20vh;
+        height: 100%;
         width: 90%;
-        background-color: green;
+       
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
         z-index: 99;
         padding: 3vw 6vw;
         position: relative;
-        top: -200px;
-        left: -40px;
+       
     }
     #footer-div .footer-h3{
         color: rgba(241, 231, 231, 0.895);
-        font-size: 1.5rem;
+        font-size: 3.5rem;
         margin-left: 0px;
     }
     #footer-div .footer-para {
         display: flex;
         flex-direction: column;
         position: relative;
-        left: -20px;
+        
         margin-top:20px ;
         
     }
     #footer-div .footer-para p{
-        font-size: 1rem;
+        font-size: 1.5rem;
         font-weight: 200;
         color: rgba(241, 231, 231, 0.895);
-        width: 90%;
+        width: 100%;
         
     }
     #footer-div .footer-para form input{
@@ -1732,14 +1732,21 @@ nav .menu .fa-xmark{
     }
     #footer-div .footer-para form input::placeholder{
         color: #EE8C77;
-        font-size: 0.9rem;
+        font-size: 1rem;
         z-index: 100;
     }
     
     #footer-bottom{
+        margin-top: 10px;
         border-top: 1px solid #dadada78;
-        height: 10vh;
+        height: 50vh;
         width: 90%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 5vw 0vw;
+        
     }
-    
 }
+
+
