@@ -1,7 +1,7 @@
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('#main'),
-    smooth: true
-});
+// const scroll = new LocomotiveScroll({
+//     el: document.querySelector('.locomotive'),
+//     smooth: true
+// });
 
 function page4Animation(){
     const elemC = document.querySelector("#elem-container");
