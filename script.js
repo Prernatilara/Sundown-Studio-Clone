@@ -22,10 +22,10 @@ function page4Animation(){
             fixed.style.backgroundImage = `url(${image})`;
             fixed.addEventListener("mouseenter",()=>{
                 fixed.style.display = "block";
-                fixed.addEventListener("mouseleave",()=>{
-                    fixed.style.display = "none";
-                   
-                })
+               
+            })
+            fixed.addEventListener("mouseleave",()=>{
+                fixed.style.display = "none";
                
             })
            
