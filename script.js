@@ -14,14 +14,27 @@ function page4Animation(){
         fixed.style.display = "none";
        
     })
+    
     const elems = document.querySelectorAll(".elem");
     elems.forEach((e)=>{
         e.addEventListener("mouseenter",()=>{
             var image = e.getAttribute("data-image");
             fixed.style.backgroundImage = `url(${image})`;
+            fixed.addEventListener("mouseenter",()=>{
+                fixed.style.display = "block";
+                fixed.addEventListener("mouseleave",()=>{
+                    fixed.style.display = "none";
+                   
+                })
+               
+            })
+           
+           
+
         })
     })
 }
+
 
 const h1 = document.querySelector("#h1");
 const h2 = document.querySelector("#h2");
@@ -90,6 +103,7 @@ swiperWrapper.addEventListener("mousemove",(dept)=>{
         xPercent:-150,
         yPercent:-400,
         ease:"elastic.out",
+        duration:1,
        
         
     })
