@@ -1606,6 +1606,7 @@ nav .menu .fa-xmark{
         background-color: black;
         bottom: 0;
         color: white;
+        padding: 0vw 0vw;
         
  
         
@@ -1684,31 +1685,34 @@ nav .menu .fa-xmark{
     #footer-div{
         height: 100%;
         width: 90%;
-       
+     
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         align-items: center;
+        justify-content: center;
         z-index: 99;
-        padding: 3vw 6vw;
+        padding: 0vw 0vw;
         position: relative;
+       
        
     }
     #footer-div .footer-h3{
         color: rgba(241, 231, 231, 0.895);
-        font-size: 3.5rem;
-        margin-left: 0px;
+        font-size: 1.5rem;
+        position: relative;
+        left: -125px;
+
     }
     #footer-div .footer-para {
         display: flex;
         flex-direction: column;
         position: relative;
         
-        margin-top:20px ;
+        margin-top:10px ;
         
     }
     #footer-div .footer-para p{
-        font-size: 1.5rem;
+        font-size: 0.8rem;
         font-weight: 200;
         color: rgba(241, 231, 231, 0.895);
         width: 100%;
@@ -1719,7 +1723,7 @@ nav .menu .fa-xmark{
         background-color: transparent;
         height: 50px;
         width:200px;
-        font-size: 1rem;
+        font-size: 0.8rem;
         border: none;
         border-bottom: 1px solid #EE8C77;
         font-weight: 200;
@@ -1731,20 +1735,24 @@ nav .menu .fa-xmark{
     }
     #footer-div .footer-para form input::placeholder{
         color: #EE8C77;
-        font-size: 1rem;
+        font-size: 0.7rem;
         z-index: 100;
     }
     
     #footer-bottom{
         margin-top: 10px;
         border-top: 1px solid #dadada78;
-        height: 50vh;
+        height: 25vh;
         width: 90%;
         display: flex;
         align-items: flex-start;
         flex-direction: column;
-        padding: 5vw 0vw;
+        padding: 2vw 0vw;
+        transform: translateX(-5%);
         
+    }
+    #footer-bottom .f-b-p{
+        font-size: 0.7rem;
     }
 }
 
