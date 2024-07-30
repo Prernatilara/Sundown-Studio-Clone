@@ -470,6 +470,7 @@ nav .menu .fa-xmark{
     margin-left: 40px;
     border-radius: 30px;
     position: relative;
+    top: 70px;
     overflow: hidden;
     cursor: pointer;
     
@@ -949,7 +950,7 @@ nav .menu .fa-xmark{
     background-color: #00000065;
     z-index: 99;
     position: fixed;
-    top: -100%;
+    top: -110%;
     transition: all 0.4s;
 }
 .black-box div{
@@ -1354,7 +1355,7 @@ nav .menu .fa-xmark{
         margin-left: 40px;
         border-radius: 30px;
         position: relative;
-        top : 40px;
+        top : 65px;
         overflow: hidden;
         cursor: pointer;
         
